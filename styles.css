@@ -1,0 +1,79 @@
+
+
+img {
+    width: 350px;
+    height: 300px;
+    padding-left: 80%;
+}
+
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #333; /* Dark background for navbar */
+  padding: 10px 0;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Multicolor for different nav items */
+.donate-link {
+  background-color: #FF6347; /* Tomato */
+}
+
+.volunteer-link {
+  background-color: #3CB371; /* Medium Sea Green */
+}
+
+.events-link {
+  background-color: #1E90FF; /* Dodger Blue */
+}
+
+.typesofautism-link {
+  background-color: #ffd900; /* Gold */
+}
+
+/* Hover effects */
+.nav-links a:hover {
+  background-color: darkblue; /* Dark gray background on hover */
+}
+
+h1 {
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 50px;
+  transition: background-color 0.3s ease;
+}
+
+div {
+  position: relative;
+  top: 20px;  /* Moves the element 20px down from its original position */
+  left: 30px; /* Moves the element 30px to the right from its original position */
+}
+
+
+

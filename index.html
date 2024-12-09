@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Autism - Support, Education, and Resources</title>
+    <meta name="description" content="Learn about autism, types, and ways to support individuals with autism. Join our efforts through donation, volunteering, or attending events.">
+    <meta name="keywords" content="Autism, Support, Education, Resources">
+    <meta property="og:title" content="Understanding Autism">
+    <meta property="og:description" content="Learn about autism, types, and ways to support individuals with autism.">
+    <meta property="og:image" content="./images/social-preview.png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Main Section -->
+    <section>
+        <h1>Understanding Autism</h1>
+        <img src="./images/autistic-8734646_1280 (1).png" alt="Artistic illustration of a brain with neural pathways representing autism awareness" title="Brain image related to autism" loading="lazy">
+    </section>
+    
+    <!-- Header -->
+    <header>
+        <div class="branding">
+            <img src="./images/logo.png" alt="Site Logo">
+        </div>
+        <nav class="navbar" aria-label="Main Navigation">
+            <ul class="nav-links">
+
+                <li><a href="#donate" class="donate-link" aria-label="Donate to our cause">Donate</a></li>
+                <li><a href="#volunteer" class="volunteer-link" aria-label="Learn how to volunteer">Volunteer</a></li>
+                <li><a href="#events" class="events-link" aria-label="See upcoming events">Events</a></li>
+                <li><a href="#types-of-autism" class="types-of-autism-link" aria-label="Explore types of autism">Types of Autism</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Contact Section -->
+    <div id="contact" class="contact-container">
+        <h1>Contact Us</h1>
+        <form action="send_message.php" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required aria-describedby="nameError">
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required aria-describedby="emailError">
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" placeholder="Optional">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required aria-describedby="messageError"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+          <!-- Donation Section -->
+    <div id="donate" class="donate-container">
+        <h1>Support Our Mission</h1>
+        <p>Your donation helps us provide resources, education, and support to individuals and families affected by autism.</p>
+        <form action="process_donation.php" method="POST" class="donation-form">
+            <label for="donation-amount">Donation Amount:</label>
+            <select id="donation-amount" name="donation-amount" required>
+                <option value="25">$25</option>
+                <option value="50">$50</option>
+                <option value="100">$100</option>
+                <option value="custom">Custom Amount</option>
+            </select>
+
+            <label for="custom-amount" class="custom-amount-label" style="display: none;">Enter Custom Amount:</label>
+            <input type="number" id="custom-amount" name="custom-amount" min="1" step="0.01" style="display: none;">
+
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message (Optional):</label>
+            <textarea id="message" name="message"></textarea>
+
+            <button type="submit">Donate Now</button>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <nav aria-label="Footer Navigation">
+            <ul>
+                <li><a href="#about-us" aria-label="Learn about us">About Us</a></li>
+                <li><a href="#contact" aria-label="Get in touch with us">Contact</a></li>
+                <li><a href="#donate" aria-label="Donate to our cause">Donate</a></li>
+                <li><a href="#volunteer" aria-label="Volunteer opportunities">Volunteer</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2024 Understanding Autism. All rights reserved.</p>
+        <div class="footer-info">
+            <p>Email: <a href="mailto:info@understandingautism.org">info@understandingautism.org</a></p>
+            <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            <p>Follow us on <a href="https://twitter.com/understandingautism" target="_blank" rel="noopener noreferrer">Twitter</a> and <a href="https://facebook.com/understandingautism" target="_blank" rel="noopener noreferrer">Facebook</a>.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        // Show/hide custom donation amount input
+        const donationAmount = document.getElementById('donation-amount');
+        const customAmountLabel = document.querySelector('.custom-amount-label');
+        const customAmountInput = document.getElementById('custom-amount');
+
+        donationAmount.addEventListener('change', () => {
+            if (donationAmount.value === 'custom') {
+                customAmountLabel.style.display = 'block';
+                customAmountInput.style.display = 'block';
+                customAmountInput.required = true;
+            } else {
+                customAmountLabel.style.display = 'none';
+                customAmountInput.style.display = 'none';
+                customAmountInput.required = false;
+            }
+        });
+    </script>
+</body>
+</html>
